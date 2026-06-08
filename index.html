@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ECE Toolkit v1 - A clean, professional toolkit for Diploma and Engineering ECE students. Includes Ohm's Law, Resistor Color Code, Unit Converter, and Attendance Calculator.">
+    <meta name="author" content="Shyam">
+    <meta name="theme-color" content="#0a1929">
+    <title>ECE Toolkit v1 | Shyam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">ECE<span>Toolkit</span></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ohms-law">Ohm's Law</a></li>
+                <li><a href="#resistor">Resistor</a></li>
+                <li><a href="#converter">Converter</a></li>
+                <li><a href="#attendance">Attendance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <span class="badge">v1.0 · For ECE Students</span>
+            <h1>ECE <span class="gradient-text">Toolkit</span></h1>
+            <p class="hero-subtitle">A clean, fast, mobile-friendly toolkit built for Diploma &amp; B.Tech ECE students. Ohm's Law, Resistor Codes, Unit Conversion &amp; Attendance — all in one place.</p>
+            <div class="hero-buttons">
+                <a href="#ohms-law" class="btn btn-primary">Get Started</a>
+                <a href="#resistor" class="btn btn-secondary">Explore Tools</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Tools</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Installs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Offline</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container main-content">
+
+        <!-- Ohm's Law Calculator -->
+        <section class="card" id="ohms-law">
+            <div class="card-header">
+                <div class="card-icon">⚡</div>
+                <div>
+                    <h2>Ohm's Law Calculator</h2>
+                    <p class="card-subtitle">V = I × R &nbsp;·&nbsp; Enter any two values to find the third</p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="grid-3">
+                    <div class="field">
+                        <label for="voltage">Voltage (V)</label>
+                        <div class="input-group">
+                            <input type="number" id="voltage" placeholder="0" step="any" inputmode="decimal">
+                            <span class="unit">V</span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="current">Current (I)</label>
+                        <div class="input-group">
+                            <input type="number" id="current" placeholder="0" step="any" inputmode="decimal">
+                            <span class="unit">A</span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="resistance">Resistance (R)</label>
+                        <div class="input-group">
+                            <input type="number" id="resistance" placeholder="0" step="any" inputmode="decimal">
+                            <span class="unit">Ω</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary" id="calculateOhms">Calculate</button>
+                    <button class="btn btn-ghost" id="resetOhms">Reset</button>
+                </div>
+
+                <div class="result" id="ohmsResult">
+                    <span class="result-label">Result</span>
+                    <span class="result-value" id="ohmsResultText">Enter any two values to begin</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resistor Color Code -->
+        <section class="card" id="resistor">
+            <div class="card-header">
+                <div class="card-icon">🎨</div>
+                <div>
+                    <h2>Resistor Color Code</h2>
+                    <p class="card-subtitle">4-band resistor · Pick the color of each band</p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="resistor-preview">
+                    <div class="resistor-body">
+                        <div class="band" id="band1"></div>
+                        <div class="band" id="band2"></div>
+                        <div class="band" id="band3"></div>
+                        <div class="band" id="band4"></div>
+                    </div>
+                </div>
+
+                <div class="grid-4">
+                    <div class="field">
+                        <label for="band1Color">Band 1 (1st digit)</label>
+                        <select id="band1Color" class="select"></select>
+                    </div>
+                    <div class="field">
+                        <label for="band2Color">Band 2 (2nd digit)</label>
+                        <select id="band2Color" class="select"></select>
+                    </div>
+                    <div class="field">
+                        <label for="band3Color">Band 3 (Multiplier)</label>
+                        <select id="band3Color" class="select"></select>
+                    </div>
+                    <div class="field">
+                        <label for="band4Color">Band 4 (Tolerance)</label>
+                        <select id="band4Color" class="select"></select>
+                    </div>
+                </div>
+
+                <div class="result result-large">
+                    <span class="result-label">Resistance Value</span>
+                    <span class="result-value" id="resistorValue">— Ω</span>
+                    <span class="result-meta" id="resistorTolerance">Select colors to begin</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit Converter -->
+        <section class="card" id="converter">
+            <div class="card-header">
+                <div class="card-icon">🔄</div>
+                <div>
+                    <h2>Electronics Unit Converter</h2>
+                    <p class="card-subtitle">Voltage, Current, Resistance &amp; Frequency</p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="tabs" id="converterTabs">
+                    <button class="tab active" data-type="voltage">Voltage</button>
+                    <button class="tab" data-type="current">Current</button>
+                    <button class="tab" data-type="resistance">Resistance</button>
+                    <button class="tab" data-type="frequency">Frequency</button>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="fromValue">From</label>
+                        <div class="input-group">
+                            <input type="number" id="fromValue" placeholder="0" step="any" inputmode="decimal">
+                        </div>
+                        <label for="fromUnit" class="mt-1">Unit</label>
+                        <select id="fromUnit" class="select"></select>
+                    </div>
+                    <div class="field">
+                        <label for="toValue">To</label>
+                        <div class="input-group">
+                            <input type="number" id="toValue" placeholder="0" step="any" inputmode="decimal" readonly>
+                        </div>
+                        <label for="toUnit" class="mt-1">Unit</label>
+                        <select id="toUnit" class="select"></select>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <span class="result-label">Converted Value</span>
+                    <span class="result-value" id="converterResult">0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attendance Calculator -->
+        <section class="card" id="attendance">
+            <div class="card-header">
+                <div class="card-icon">📚</div>
+                <div>
+                    <h2>Attendance Calculator</h2>
+                    <p class="card-subtitle">Stay above 75% · Plan your leaves smartly</p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="attended">Classes Attended</label>
+                        <div class="input-group">
+                            <input type="number" id="attended" placeholder="0" min="0" step="1" inputmode="numeric">
+                            <span class="unit">classes</span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="total">Total Classes</label>
+                        <div class="input-group">
+                            <input type="number" id="total" placeholder="0" min="0" step="1" inputmode="numeric">
+                            <span class="unit">classes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary" id="calculateAttendance">Calculate</button>
+                    <button class="btn btn-ghost" id="resetAttendance">Reset</button>
+                </div>
+
+                <div class="attendance-results">
+                    <div class="att-card">
+                        <span class="att-label">Current %</span>
+                        <span class="att-value" id="attPercentage">—</span>
+                    </div>
+                    <div class="att-card">
+                        <span class="att-label">Can Miss</span>
+                        <span class="att-value" id="attCanMiss">—</span>
+                    </div>
+                    <div class="att-card">
+                        <span class="att-label">Need to Attend</span>
+                        <span class="att-value" id="attNeed">—</span>
+                    </div>
+                </div>
+
+                <div class="result" id="attendanceResult">
+                    <span class="result-label">Status</span>
+                    <span class="result-value" id="attendanceStatus">Enter your class details to begin</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">ECE<span>Toolkit</span></span>
+                </div>
+                <p class="footer-title">ECE Toolkit v1</p>
+                <p class="footer-author">Created by <strong>Shyam</strong></p>
+                <p class="footer-tag">Diploma ECE Student</p>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ECE Toolkit · Built with ❤ for ECE students</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
