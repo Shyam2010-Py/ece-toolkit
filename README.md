@@ -42,7 +42,7 @@ That's it. **Only 4 files. No `node_modules`, no build step, no backend.**
 
 ## 🚀 How to Run Locally
 
-You have **three easy options** — pick whichever is easiest for you:
+You have **two easy options** — pick whichever is easiest for you:
 
 ### Option 1 · Just double-click (easiest)
 1. Download / clone this folder.
@@ -57,68 +57,6 @@ You have **three easy options** — pick whichever is easiest for you:
 3. Right-click `index.html` → **"Open with Live Server"**.
 
 This adds auto-reload when you edit files.
-
-### Option 3 · Python one-liner (if you have Python)
-```bash
-cd ece-toolkit-v1
-python -m http.server 8000
-```
-Then open `http://localhost:8000` in your browser.
-
----
-
-## ⬆️ How to Upload to GitHub
-
-### Step 1 — Create a new repository
-1. Go to [github.com](https://github.com) and sign in.
-2. Click the **"+"** icon (top right) → **"New repository"**.
-3. Name it: `ece-toolkit-v1`
-4. Make it **Public** (required for free GitHub Pages).
-5. ✅ Check **"Add a README file"** (or skip — we already have one).
-6. Click **"Create repository"**.
-
-### Step 2 — Upload your files
-You can do this in **2 ways**:
-
-**A) Via the GitHub website (easiest for beginners):**
-1. On your new repo page, click **"uploading an existing file"** (or **"Add file" → "Upload files"**).
-2. Drag & drop these 4 files: `index.html`, `style.css`, `script.js`, `README.md`.
-3. Scroll down → click **"Commit changes"**. ✅ Done.
-
-**B) Via Git command line:**
-```bash
-cd ece-toolkit-v1
-git init
-git add .
-git commit -m "Initial commit - ECE Toolkit v1"
-git branch -M main
-git remote add origin https://github.com/<your-username>/ece-toolkit-v1.git
-git push -u origin main
-```
-> Replace `<your-username>` with your actual GitHub username.
-
----
-
-## 🌐 How to Publish with GitHub Pages (Free Hosting!)
-
-GitHub Pages lets you host this site **for free** at `https://<your-username>.github.io/ece-toolkit-v1/`.
-
-### Steps:
-1. Go to your repo on GitHub → click **Settings** (top tab).
-2. In the left sidebar, click **Pages**.
-3. Under **"Build and deployment"**:
-   - **Source**: `Deploy from a branch`
-   - **Branch**: `main` · folder: `/ (root)`
-4. Click **Save**.
-5. Wait **30–60 seconds**, then refresh the page.
-6. You'll see a banner: *"Your site is live at ..."* 🎉
-
-### Your public URL will be:
-```
-https://<your-username>.github.io/ece-toolkit-v1/
-```
-
-Share that link with your classmates — they can use the toolkit from any phone or laptop! 📱💻
 
 ---
 
