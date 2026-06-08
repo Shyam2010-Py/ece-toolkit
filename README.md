@@ -4,6 +4,20 @@ A clean, fast, and mobile-friendly web toolkit built for **Diploma & B.Tech ECE 
 
 > Created with ❤ by **Shyam** · Diploma ECE Student
 
+## 🌐 Live Demo
+
+https://shyam2010-py.github.io/ece-toolkit/
+
+---
+
+## 💡 Why I Built This
+
+As a Diploma ECE student, I often needed quick access to
+electronics calculators and attendance calculations.
+
+Instead of using multiple websites and apps, I created
+ECE Toolkit to keep everything in one place.
+
 ---
 
 ## ✨ Features
@@ -14,6 +28,8 @@ A clean, fast, and mobile-friendly web toolkit built for **Diploma & B.Tech ECE 
 | 2 | **Resistor Color Code** | 4-band resistor decoder with live color preview, resistance value & tolerance display. |
 | 3 | **Electronics Unit Converter** | Convert Voltage, Current, Resistance & Frequency (μA↔mA↔A, Ω↔kΩ↔MΩ, Hz↔kHz↔MHz, etc.). |
 | 4 | **Attendance Calculator** | Computes % attendance, classes you can still miss, and classes needed to hit 75%. |
+
+---
 
 ### Design Highlights
 - 🌑 **Dark blue theme** (easy on the eyes during night study sessions)
@@ -107,6 +123,19 @@ need_to_attend = ceil(3 × total - 4 × attended)
 - 🎓 **B.Tech ECE Students** — fast references during assignments
 - 🔧 **Electronics Hobbyists** — handy bench calculators
 - 🤖 **ESP32 Beginners** — quick Ohm's law + resistor lookups
+
+---
+
+## 🚀 Roadmap
+
+- [x] Ohm's Law Calculator
+- [x] Resistor Color Code Calculator
+- [x] Unit Converter
+- [x] Attendance Calculator
+- [ ] GPA Calculator
+- [ ] LED Resistor Calculator
+- [ ] ESP32 Reference Guide
+- [ ] Sensor Reference Guide
 
 ---
 
