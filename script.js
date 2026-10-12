@@ -1,12 +1,12 @@
-// ECE Toolkit v1 - JavaScript
-// Plain vanilla JS, no dependencies.
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     'use strict';
 
-    // ============================
-    // MOBILE MENU
-    // ============================
+
+
+
     var menuToggle = document.getElementById('menuToggle');
     var navLinks = document.getElementById('navLinks');
     if (menuToggle && navLinks) {
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // ============================
-    // TOAST
-    // ============================
+
+
+
     var toastEl = document.getElementById('toast');
     var toastTimer = null;
     function showToast(message, type) {
@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return parseFloat(num.toFixed(4)).toString();
     }
 
-    // ============================
-    // 1) OHM'S LAW  (V = I x R)
-    // ============================
+
+
+
     var voltageEl = document.getElementById('voltage');
     var currentEl = document.getElementById('current');
     var resistanceEl = document.getElementById('resistance');
@@ -142,9 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ============================
-    // 2) RESISTOR COLOR CODE (4-band)
-    // ============================
+
+
+
     var colorDigits = {
         black:  { d: 0, m: 1 },
         brown:  { d: 1, m: 10 },
@@ -246,9 +246,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     updateResistor();
 
-    // ============================
-    // 3) UNIT CONVERTER
-    // ============================
+
+
+
     var units = {
         voltage: [
             { name: 'Millivolt', short: 'mV', factor: 0.001 },
@@ -349,9 +349,9 @@ document.addEventListener('DOMContentLoaded', function () {
         convertUnits();
     }
 
-    // ============================
-    // 4) ATTENDANCE
-    // ============================
+
+
+
     var attendedEl = document.getElementById('attended');
     var totalEl = document.getElementById('total');
     var calculateAttBtn = document.getElementById('calculateAttendance');
@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var percentage = (attended / total) * 100;
         if (attPercentageEl) attPercentageEl.textContent = percentage.toFixed(2) + '%';
 
-        // Classes you can miss while staying >= 75%
+
         var maxTotalFor75 = attended / 0.75;
         var canMiss = Math.floor(maxTotalFor75 - total);
         if (attCanMissSpan) {
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 : '0 classes';
         }
 
-        // Classes needed to reach 75%
+
         var need = Math.ceil(3 * total - 4 * attended);
         if (attNeedEl) {
             if (need <= 0) attNeedEl.textContent = '0 classes';
